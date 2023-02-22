@@ -40,4 +40,9 @@ public abstract class Animal implements Seasonable,Comparable<Animal> {
         else
             return 0;
     }
+    @Override
+    public String toString() {
+        return "Animal [weight=" + weight + ", season=" + season + ", color=" + color + "]";
+    }
+
 }
