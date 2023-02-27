@@ -1,16 +1,29 @@
 public class Bear extends Animal {
 
     Bear(int weight, Season season) {
-        // TODO: Implement.
-        super(0,null,null);
+        super(weight,season, Color.BROWN);
     }
     @Override
     public String toString() {
-        // TODO: Implement.
-        return null;
+        return "Bear:"+super.toString();
     }
     @Override
     public void changeSeason() {
-        // TODO: Implement.
+        super.changeSeason();
+        switch (super.getCurrentSeason())
+        {
+            case FALL:
+                weight = (int) (1.25 * weight);
+                break;
+            case WINTER:
+                weight = (int) (0.80 * weight);
+                break;
+            case SPRING:
+                weight = (int) (0.75 * weight);
+                break;
+            case SUMMER:
+                weight = (int) (1.33 * weight);
+                break;
+        }
     }
 }
